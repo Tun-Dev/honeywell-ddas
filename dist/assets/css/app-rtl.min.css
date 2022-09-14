@@ -3937,6 +3937,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
 
 .step-1 {
   height: 600px;
+  margin: 0 auto;
 }
 .step-1 .card {
   height: 100%;
