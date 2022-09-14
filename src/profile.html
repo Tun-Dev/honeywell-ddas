@@ -1,0 +1,165 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Profile"})
+
+        <!-- jquery.vectormap css -->
+        <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />  
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        
+                        @@include("partials/page-title.html", {"pagetitle": "", "title": "Profile"})
+
+                        <div class="app-content content ">
+                            <div class="content-overlay"></div>
+                            <div class="header-navbar-shadow"></div>
+                                <div class="content-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                        
+                    
+                                            <!-- profile -->
+                                            <div class="card">
+                                                <div class="card-body py-2 my-25">
+                                                    <!-- header section -->
+                                                    <div class="d-flex">
+                                                        <a href="#" class="me-25">
+                                                            <img src="/dist/assets/images/users/avatar-1.jpg" id="account-upload-img" class="uploadedAvatar rounded me-50" alt="profile image" height="100" width="100" />
+                                                        </a>
+                                                        <!-- upload and reset button -->
+                                                        <div class="d-flex align-items-end mt-75 ms-1">
+                                                            <div>
+                                                                <label for="account-upload" class="btn btn-sm btn-primary mb-75 me-75" style="margin-bottom: 0;">Upload</label>
+                                                                <input type="file" id="account-upload" hidden accept="image/*" />
+                                                                <button type="button" id="account-reset" class="btn btn-sm btn-outline-secondary mb-75">Reset</button>
+                                                                <!-- <p class="mb-0">Allowed file types: png, jpg, jpeg.</p> -->
+                                                            </div>
+                                                        </div>
+                                                        <!--/ upload and reset button -->
+                                                    </div>
+                                                    <!--/ header section -->
+                    
+                                                    <!-- form -->
+                                                    <form class="validate-form mt-2 pt-50">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountFirstName">First Name</label>
+                                                                <input type="text" class="form-control" id="accountFirstName" name="firstName" placeholder="John" value="John" data-msg="Please enter first name" />
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountLastName">Surname</label>
+                                                                <input type="text" class="form-control" id="accountLastName" name="lastName" placeholder="Doe" value="Doe" data-msg="Please enter last name" />
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountEmail">Email</label>
+                                                                <input type="email" class="form-control" id="accountEmail" name="email" placeholder="Email" value="johndoe@gmail.com" />
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountPhoneNumber">Phone Number</label>
+                                                                <input type="text" class="form-control account-number-mask" id="accountPhoneNumber" name="phoneNumber" placeholder="Phone Number" value="457 657 1237" />
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="Role">Role</label>
+                                                                <input type="text" class="form-control" id="Role" name="Role" placeholder="Role" value="User" />
+                                                            </div>
+                                                            
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountAddress">ID</label>
+                                                                <input type="text" class="form-control" id="accountAddress" name="address" placeholder="ID" />
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountState">Department</label>
+                                                                <input type="text" class="form-control" id="accountState" name="state" placeholder="Finance" />
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 mb-1">
+                                                                <label class="form-label" for="accountZipCode">Admin Contact</label>
+                                                                <input type="text" class="form-control account-zip-code" id="accountZipCode" name="zipCode" placeholder="Admin Contact" maxlength="6" />
+                                                            </div>
+                                                            
+                                                            <div class="col-12">
+                                                                <button type="submit" class="btn btn-primary mt-1 me-1">Save changes</button>
+                                                                <button type="reset" class="btn btn-outline-secondary mt-1">Discard</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <!--/ form -->
+                                                </div>
+                                            </div>
+                    
+                                            <!-- deactivate account  -->
+                                            
+                                            <!--/ profile -->
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+    
+  
+                        <!-- end row -->
+                    </div>
+                    
+                </div>
+                <!-- End Page-content -->
+               
+                <!-- @@include("partials/footer.html") -->
+                
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <!-- jquery.vectormap map -->
+        <script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+    </body>
+
+</html>

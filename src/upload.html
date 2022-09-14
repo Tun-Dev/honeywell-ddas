@@ -1,0 +1,245 @@
+@@include("partials/main.html")
+
+<head>
+
+    @@include("partials/title-meta.html", {"title": "Upload Document"})
+
+    <!-- jquery.vectormap css -->
+    <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Responsive datatable examples -->
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+
+    @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    @@include("partials/menu.html")
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                @@include("partials/page-title.html", {"pagetitle": "", "title": "Upload Document"})
+
+                <form>
+                    <div>
+                        <div class="step step-1 active">
+                            <div class="card">
+                                <!-- <h1>Test 1</h1> -->
+                                <div class="step1-btn">
+                                    <button type="button" class="next-btn">Upload Scans</button>
+                                    <button type="button" class="upload-doc">Upload Document</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step step-2">
+                            <div class="card">
+
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">File Name</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" placeholder="Type in file name"
+                                            id="example-text-input">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Description</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" placeholder="Type in description"
+                                            id="example-text-input">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Keyword</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" placeholder="(Optional)"
+                                            id="example-text-input">
+                                    </div>
+                                </div>
+
+                                <div class="step2-btn">
+                                    <button type="button" class="prev-btn">Prev</button>
+                                    <button type="button" class="next-btn">Next</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="step step-3 ">
+                            <div class="card">
+                                <div class="img-con d-flex flex-wrap justify-content-start" id="container">
+                                    <!-- <div class="image_container">
+                                        <img src="/src/assets/images/users/avatar-3.jpg" alt="">
+                                        <span class="position-absolute">&times;</span>
+                                    </div> -->
+                                </div>
+                                <div>
+                                    <form class="form" action="#" method="post" id="test">
+                                        <input type="file" name="image" id="imageselect" multiple="" class="d-none"
+                                            onchange="image_select()">
+                                        <button class="choosebtn" type="button"
+                                            onclick="document.getElementById('imageselect').click()">Choose
+                                            Scans</button>
+                                    </form>
+                                </div>
+                                <div class="step3-btn">
+                                    <button type="button" class="prev-btn">Prev</button>
+                                    <button type="button" class="next-btn">Next</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="step step-4 ">
+                            <div class="card">
+                                <embed src="/src/assets/pdf/Resume.pdf" width="800px" height="800px" />
+
+                                <div class="step4-btn">
+                                    <button type="button" class="prev-btn">Prev</button>
+                                    <button type="button" class="next-btn">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step step-5">
+                            <div class="card">
+                                <h1>Archived Successfully</h1>
+
+                                <div class="step5-btn">
+                                    <button type="button" onclick="submit()">Close</button>
+                                    <!-- <button type="button" class="next-btn">Next</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <!-- end row -->
+
+
+                <!-- end row -->
+            </div>
+
+        </div>
+        <!-- End Page-content -->
+
+        <!-- @@include("partials/footer.html") -->
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+
+<!-- apexcharts -->
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+<!-- jquery.vectormap map -->
+<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Responsive examples -->
+<script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+<script src="assets/js/pages/dashboard.init.js"></script>
+
+<script>
+    const steps = Array.from(document.querySelectorAll('form .step'))
+    const nextBtn = document.querySelectorAll('form .next-btn')
+    const prevBtn = document.querySelectorAll('form .prev-btn')
+    console.log(steps)
+
+    nextBtn.forEach(btn => {
+        btn.addEventListener("click", () => {
+            changeStep('next')
+        })
+    })
+    prevBtn.forEach(btn => {
+        btn.addEventListener("click", () => {
+            changeStep('prev');
+        })
+    })
+
+    function changeStep(btn) {
+        let index = 0
+        const active = document.querySelector('form .step.active');
+        index = steps.indexOf(active);
+        steps[index].classList.remove('active');
+
+        if (btn === 'next') {
+            index++;
+        } else if (btn === 'prev') {
+            index--;
+        }
+        steps[index].classList.add('active');
+        console.log(index)
+    }
+
+
+    var images = [];
+    function image_select() {
+        var image = document.getElementById('imageselect').files;
+        for (var i = 0; i < image.length; i++) {
+            images.push({
+                "name": image[i].name,
+                "url": URL.createObjectURL(image[i]),
+                "file": image[i]
+            });
+        }
+
+        document.getElementById('container').innerHTML = image_show()
+        // document.getElementById('test').reset();
+        // console.log(images)
+    }
+    function image_show() {
+        var image = "";
+        images.forEach((i) => {
+            image += `<div class="image_container">
+                        <img src="${i.url}" alt="image">
+                        <span class="position-absolute" onclick="delete_image(${images.indexOf(i)})">&times;</span>
+                    </div>`
+        })
+
+        return image;
+    }
+
+    function delete_image(e) {
+        images.splice(e, 1);
+        document.getElementById('container').innerHTML = image_show()
+
+    }
+
+    function submit(e) {
+        e.preventDefault()
+    }
+</script>
+
+<!-- App js -->
+<script src="assets/js/app.js"></script>
+</body>
+
+</html>

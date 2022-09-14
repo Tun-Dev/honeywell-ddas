@@ -1,0 +1,108 @@
+@@include("partials/main.html")
+
+<head>
+
+    @@include("partials/title-meta.html", {"title": "Search"})
+
+    <!-- jquery.vectormap css -->
+    <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Responsive datatable examples -->
+    <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+
+    @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    @@include("partials/menu.html")
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                @@include("partials/page-title.html", {"pagetitle": "", "title": "Search"})
+
+
+                <!-- end row -->
+
+                <div class="card"
+                    style="margin: 0 auto; width: 100%; display: flex; flex-direction: column; height: calc(100vh - 170px);">
+
+                    <div class="card-body"
+                        style=" display: flex; justify-content: center; align-items: center; width: 100%;">
+                        <div class="row"
+                            style=" width: 90%; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                            <div class="col-xl-20 col-md-10 col-sm-6 col-12 pe-sm-0">
+                                <div class="mb-0" style="width: 100%;">
+                                    <input type="text" class="form-control" id="copy-to-clipboard-input"
+                                        placeholder="Search Archive" />
+                                </div>
+                            </div>
+                            <div style="width: fit-content;">
+                                <a href="search-result.html" class="btn btn-outline-primary" id="btn-copy">Search</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- end row -->
+            </div>
+
+        </div>
+        <!-- End Page-content -->
+
+        <!-- @@include("partials/footer.html") -->
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+
+<!-- apexcharts -->
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+<!-- jquery.vectormap map -->
+<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Responsive examples -->
+<script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+<script src="assets/js/pages/dashboard.init.js"></script>
+
+
+<!-- Datatable init js -->
+<script src="assets/js/pages/datatables.init.js"></script>
+
+<!-- App js -->
+<script src="assets/js/app.js"></script>
+</body>
+
+</html>
