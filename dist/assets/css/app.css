@@ -4057,8 +4057,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 30%;
-  margin-top: 70px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .step-3 .card .step3-btn button {
   background: #203354;
@@ -4070,6 +4070,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
   border-radius: 8px;
 }
 .step-3 .card .img-con {
+  height: 470px;
+  overflow-y: auto;
   width: 95%;
   background: rgb(247, 241, 241);
   border-radius: 8px;
@@ -4082,8 +4084,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  height: 120px;
-  width: 200px;
+  height: 370px;
+  width: 450px;
   border-radius: 6px;
   overflow: hidden;
   margin: 10px;

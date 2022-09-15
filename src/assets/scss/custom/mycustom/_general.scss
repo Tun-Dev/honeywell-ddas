@@ -118,8 +118,8 @@
             justify-content: space-between;
             // border: 1px solid black;
             width: 30%;
-            margin-top: 70px;
-            margin-bottom: 30px;
+            margin-top: 10px;
+            margin-bottom: 20px;
 
             button{
                 background: #203354;
@@ -133,6 +133,8 @@
         }
 
         .img-con{
+            height: 470px;
+            overflow-y: auto;
             // border: 1px solid red;
             width: 95%;
             background: rgb(247, 241, 241);
@@ -143,8 +145,8 @@
             display: flex;
             justify-content: center;
             position: relative;
-            height: 120px;
-            width: 200px;
+            height: 370px;
+            width: 450px;
             border-radius: 6px;
             overflow: hidden;
             margin: 10px;
